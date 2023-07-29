@@ -63,4 +63,5 @@ public class ProductoController {
     public List<Producto> getProductosStockMenorACinco() {
         return productServ.getProductosStockMenorACinco();
     }
+
 }
