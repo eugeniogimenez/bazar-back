@@ -23,8 +23,43 @@ public class VentaService implements IVentaService {
         return listaVentas;
     }
 
+    /*
     @Override
     public void saveVenta(Venta vent) {
+        System.out.println("Método saveVenta() activado con venta: " + vent.getCodigo_venta());
+        // Validar que haya suficiente stock para los productos vendidos en la nueva venta
+        //itera lost productos de esta venta
+        for (Producto producto : vent.getListaProductos()) {
+            System.out.println("producto cantidad: " + producto.getCantidad_disponible());
+
+            //busca el producto en la db a ver si está guardado. Compara codigo con codigo
+            Producto productoEnBD = productRepo.findById(producto.getCodigo_producto()).orElse(null);
+            System.out.println("Producto encontrado en la base de datos: " + productoEnBD);
+
+            //Si está en la db
+            if (productoEnBD != null) {
+                //compara cantidad entre la db y cantidad que pide en esta venta.
+                if (productoEnBD.getCantidad_disponible() >= producto.getCantidad_disponible()) {
+
+                    // Actualizar el stock del producto restando la cantidad vendida
+                    //Resto lo que tengo menos lo que vendo y lo actualizao
+                    Double cantidadActualizada = productoEnBD.getCantidad_disponible() - producto.getCantidad_disponible();
+                    productoEnBD.setCantidad_disponible(cantidadActualizada);
+                    productRepo.save(productoEnBD);
+                } else {
+                    throw new RuntimeException("No hay suficiente cantidad disponible del producto: " + producto.getNombre());
+                }
+            } else {
+                throw new RuntimeException("Producto no encontrado en la base de datos: " + producto.getCodigo_producto());
+            }
+        }
+
+        // Si hay suficiente stock para todos los productos vendidos, procedemos a guardar la nueva venta
+        ventRepo.save(vent);
+    }*/
+    @Override
+    public void saveVenta(Venta vent) {
+
         ventRepo.save(vent);
     }
 

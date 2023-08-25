@@ -5,8 +5,9 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import java.time.LocalDate;
 import java.util.List;
 import lombok.Getter;
@@ -23,11 +24,16 @@ public class Venta {
     private LocalDate fecha_venta;
     private Double total;
 
-    @OneToMany
+    //Una venta puede tener muchos productos (y viceversa)
+    @ManyToMany
+    @JoinTable(name = "venta_producto",
+            joinColumns = @JoinColumn(name = "fk_venta"),
+            inverseJoinColumns = @JoinColumn(name = "fk_producto"))
     private List<Producto> listaProductos;
 
-    @OneToOne
-    @JoinColumn(name = "fk_cliente", referencedColumnName = "id_cliente")
+    //Muchas ventas pueden pertenecer a un cliente
+    @ManyToOne
+    @JoinColumn(name = "fk_cliente")
     private Cliente unCliente;
 
     public Venta() {

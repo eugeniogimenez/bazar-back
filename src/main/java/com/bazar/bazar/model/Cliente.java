@@ -1,9 +1,13 @@
 package com.bazar.bazar.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
+import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,6 +22,15 @@ public class Cliente {
     private String nombre;
     private String apellido;
     private String dni;
+
+    //Un cliente puede tener muchos productos(y viceversa)
+    @ManyToMany
+    @JsonIgnore
+    private List<Producto> listaProductos;
+
+    //Un cliente puede tener muchas ventas
+    @OneToMany
+    private List<Venta> ventas;
 
     public Cliente() {
     }
