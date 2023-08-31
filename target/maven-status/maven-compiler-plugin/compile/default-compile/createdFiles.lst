@@ -1,0 +1,17 @@
+com\bazar\bazar\model\Venta.class
+com\bazar\bazar\repository\IClienteRepository.class
+com\bazar\bazar\controller\ClienteController.class
+com\bazar\bazar\model\Cliente.class
+com\bazar\bazar\service\IVentaService.class
+com\bazar\bazar\repository\IVentaRepository.class
+com\bazar\bazar\controller\ProductoController.class
+com\bazar\bazar\model\Producto.class
+com\bazar\bazar\service\ClienteService.class
+com\bazar\bazar\service\VentaService.class
+com\bazar\bazar\controller\VentaController.class
+com\bazar\bazar\service\IProductoService.class
+com\bazar\bazar\service\ProductoService.class
+com\bazar\bazar\dto\VentaMayorDTO.class
+com\bazar\bazar\service\IClienteService.class
+com\bazar\bazar\BazarApplication.class
+com\bazar\bazar\repository\IProductoRepository.class
