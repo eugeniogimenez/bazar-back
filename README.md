@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # BAZAR - BACK
+=======
+# BAZAR - BACK  
+>>>>>>> 4e17f1d66098cf975345c704ee3ca5086d7ab59f
 
 ## Descripcion General:
 El proyecto consiste en un Sistema para la administración de un Bazar. El usuario puede ser el dueño o un empleado de dicho negocio. Se trabaja con Productos, Clientes y Ventas, pudiendo guardar datos tanto de las personas, como los productos y las ventas que se van realizando.
@@ -29,7 +33,11 @@ Las tecnologías usadas son:
 Se sigue el modelo MVC para trabajar por capas. Se usó la estructura acorde a SpringBoot con las siguientes capas: Controller, DTO, Model, Repository, y  Service
 
 ## Base de Datos:
+<<<<<<< HEAD
 Utilización de MySQL mediante el servicio de Clever Cloud.
+=======
+Utilización de MySQL mediante el servicio de Clever Cloud. 
+>>>>>>> 4e17f1d66098cf975345c704ee3ca5086d7ab59f
 
 ## Docker:
 La app se dockerizó para su posterior despliegue.
