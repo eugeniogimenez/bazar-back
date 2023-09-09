@@ -3,7 +3,7 @@
 ## Descripcion General:
 El proyecto consiste en un Sistema para la administración de un Bazar. El usuario puede ser el dueño o un empleado de dicho negocio. Se trabaja con Productos, Clientes y Ventas, pudiendo guardar datos tanto de las personas, como los productos y las ventas que se van realizando.
 
- Siguiendo el modelo "Cliente - Servidor", tanto el front como el back se trabajaron por separado. En resumen, para el front se uso Typescript, y para el back, **JAVA - SprinBoot**, conectando a una base de datos MySQL.
+ Siguiendo el modelo "Cliente - Servidor", tanto el front como el back se trabajaron por separado. En resumen, para el front se uso Typescript, y para el back, **JAVA - SpringBoot**, conectando a una base de datos MySQL.
 
  La dirección de la app es: https://bazar-front.netlify.app
 
